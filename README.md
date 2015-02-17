@@ -1,4 +1,4 @@
-Team: Shaolin Spiders [SS]
+## Team: Shaolin Spiders [SS]
 
 Participants: Kalin Marinov, Dimitar Matev, Krassen Angelov
 
