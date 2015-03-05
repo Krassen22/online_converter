@@ -1,0 +1,3 @@
+<p><%= @user.email %></p>
+<div style="font-size: 40px;font-weight: bold;">Requests</div>
+<%= render partial: 'users/request', collection: @user.requests %>
