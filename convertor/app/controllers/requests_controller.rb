@@ -1,4 +1,4 @@
-class ConvertorController < ApplicationController
+class RequestsController < ApplicationController
 	def index
 		@request = Request.new
 	end
