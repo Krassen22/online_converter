@@ -22,7 +22,7 @@ module Convert
 			{
 				code: xml_response.xpath("//status//code").text,
 				message: xml_response.xpath("//status//message").text,
-				hash: xml_response.xpath("//params//hash").text,
+				hash_key: xml_response.xpath("//params//hash").text,
 				directDownload: "http://www13.online-convert.com/download-file/#{ xml_response.xpath("//params//hash").text }"
 			}
 		end
@@ -34,6 +34,7 @@ module Convert
 					<targetMethod>convert-to-#{ convert_to }</targetMethod>
 					<testMode>true</testMode>
 					<sourceUrl>#{ source }</sourceUrl>
+					<notificationUrl>91.211.189.161</notificationUrl>
 				</queue>"
 		end
 

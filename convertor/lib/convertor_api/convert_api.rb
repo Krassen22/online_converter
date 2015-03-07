@@ -8,7 +8,7 @@ module Convert
 			@api_key = api_key
 		end
 
-		def send_request args = { media_type: nil, convert_to: nil, source_url: nil }
+		def send_request args = {}
 			send_api = SendConvertApi.new @api_key		
 			send_api.send_request args[:media_type], args[:convert_to], args[:source_url]
 		end

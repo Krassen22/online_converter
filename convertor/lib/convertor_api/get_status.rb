@@ -9,8 +9,8 @@ module Convert
 			@api_key = api_key
 		end
 
-		def get_request hash
-			request = format_get_request hash
+		def get_request hash_key
+			request = format_get_request hash_key
 			response = make_request request
 			self.class.get_values(response)
 		end
@@ -19,17 +19,17 @@ module Convert
 			xml_response = Nokogiri::XML(response)
 			{
 				code: xml_response.xpath("//status//code").text,
-				hash: xml_response.xpath("//params//hash").text
+				hash_key: xml_response.xpath("//params//hash").text
 			}
 		end
 
 		private
 	
-		def format_get_request hash
+		def format_get_request hash_key
 			"<?xml version='1.0' encoding='utf-8' ?>
 			<queue>
 				<apiKey>#{ @api_key }</apiKey>
-				<hash>#{ hash }</hash>
+				<hash>#{ hash_key }</hash>
 			</queue>"
 		end
 
