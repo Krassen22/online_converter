@@ -34,7 +34,7 @@ module Convert
 					<targetMethod>convert-to-#{ convert_to }</targetMethod>
 					<testMode>true</testMode>
 					<sourceUrl>#{ source }</sourceUrl>
-					<notificationUrl>91.211.189.161</notificationUrl>
+					<notificationUrl>url</notificationUrl>
 				</queue>"
 		end
 
