@@ -7,10 +7,10 @@ class RequestsController < ApplicationController
 
 	def create
 		@request = Request.new(request_params)
-		@request.user = current_user
 		convert = Convert::ConvertApi.new 'd5f199db46752c458c9f2597ccd8e609'
 		response = convert.send_request request_params 
 		if response[:code].to_i == success
+			@request.hash_key = response[:hash_key]
 			save_request
 		else
 			flash[:notice] = response[:message]
@@ -21,6 +21,7 @@ class RequestsController < ApplicationController
 	private
 	
 	def save_request
+		@request.user = current_user
 		if @request.save
 			flash[:notice] = "New request was made"
 			redirect_to root_path
