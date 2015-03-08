@@ -6,6 +6,8 @@ class CreateRequests < ActiveRecord::Migration
 			t.string :media_type
 			t.string :convert_to
 			t.string :hash_key
+			t.string :status, default: "Converting.."
+			t.string :download_link
       t.timestamps null: false
     end
   end

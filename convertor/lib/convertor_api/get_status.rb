@@ -18,8 +18,7 @@ module Convert
 		def self.get_values response
 			xml_response = Nokogiri::XML(response)
 			{
-				code: xml_response.xpath("//status//code").text,
-				hash_key: xml_response.xpath("//params//hash").text
+				converted: xml_response.xpath("//status//code").text.to_i == 100 ? true : false
 			}
 		end
 
