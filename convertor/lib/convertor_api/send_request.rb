@@ -1,23 +1,19 @@
-require 'convertor_api/base'
 require 'nokogiri'
 
 module Convert
-	class SendConvertApi < Base
+	module SendConvertApi
 
-		def initialize api_key
-			@url = 'http://www13.online-convert.com/queue-insert'
-			@api_key = api_key
+		def send_convert_query_url
+			'http://www13.online-convert.com/queue-insert'
 		end
 
-		def send_request type, convert_to, source
-			request = format_send_request type, convert_to, source
-			response = make_request request
-			get_values response
+		def send_request args = {}
+			request = format_send_request args[:media_type], args[:convert_to], args[:source_url]
+			response = make_request request, send_convert_query_url
+			send_request_values response
 		end
 
-		private
-
-		def get_values response
+		def send_request_values response
 			xml_response = Nokogiri::XML(response)
 			{
 				success:  xml_response.xpath("//status//code").text.to_i == 0 ? true : false,

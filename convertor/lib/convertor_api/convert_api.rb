@@ -1,35 +1,28 @@
 require 'convertor_api/get_status'
 require 'convertor_api/send_request'
+require 'convertor_api/base'
+
 
 module Convert
 	class ConvertApi
+	
+		include Base
+		include GetConvertApi
+		include SendConvertApi
 
 		def initialize api_key
 			@api_key = api_key
 		end
 
-		def send_request args = {}
-			send_api = SendConvertApi.new @api_key		
-			send_api.send_request args[:media_type], args[:convert_to], args[:source_url]
-		end
-
-		def get_request hash
-			get_api = GetConvertApi.new @api_key
-			get_api.get_request hash
-		end
-
-		def self.parse_get_request response
-			GetConvertApi.get_values response
-		end
 	end
 end
 
 #testing 
-=begin
+#=begin
 
-convert = Convert::ConvertApi.new 'd5f199db46752c458c9f2597ccd8e609'
-puts convert.send_request 'video', 'mp4', 'https://www.sit.auckland.ac.nz/wiki/images/9/9f/Sample.flv' 
-puts convert.get_request '6e5bdc3b792b25456e62a5b60f1efb9a'
+#convert = Convert::ConvertApi.new 'd5f199db46752c458c9f2597ccd8e609'
+#puts convert.send_request 'video', 'mp4', 'https://www.sit.auckland.ac.nz/wiki/images/9/9f/Sample.flv' 
+#puts convert.get_request '6e5bdc3b792b25456e62a5b60f1efb9a'
 
 =begin
 # response

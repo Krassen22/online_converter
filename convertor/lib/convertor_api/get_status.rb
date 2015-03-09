@@ -1,29 +1,25 @@
-require 'convertor_api/base'
 require 'nokogiri'
 
 module Convert
-	class GetConvertApi < Base
-
-		def initialize api_key
-			@url = 'http://api.online-convert.com/queue-status'
-			@api_key = api_key
+	module GetConvertApi
+		
+		def get_convert_query_url
+			'http://api.online-convert.com/queue-status'
 		end
 
 		def get_request hash_key
 			request = format_get_request hash_key
-			response = make_request request
-			self.class.get_values(response)
+			response = make_request request, get_convert_query_url
+			get_request_values response
 		end
 
-		def self.get_values response
+		def get_request_values response
 			xml_response = Nokogiri::XML(response)
 			{
 				converted: xml_response.xpath("//status//code").text.to_i == 100 ? true : false
 			}
 		end
 
-		private
-	
 		def format_get_request hash_key
 			"<?xml version='1.0' encoding='utf-8' ?>
 			<queue>
