@@ -17,7 +17,7 @@
 <% if user_signed_in? %>
 	<%= link_to "Users", users_path %>
 	<%= link_to "Request", requests_path %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  Logged in as <strong><%= current_user.email %></strong>|Level: <strong><%= current_user.level %></strong>
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>

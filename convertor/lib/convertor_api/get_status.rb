@@ -3,13 +3,9 @@ require 'nokogiri'
 module Convert
 	module GetConvertApi
 		
-		def get_convert_query_url
-			'http://api.online-convert.com/queue-status'
-		end
-
 		def get_request hash_key
 			request = format_get_request hash_key
-			response = make_request request, get_convert_query_url
+			response = make_request request, @params["status_url"]
 			get_request_values response
 		end
 
@@ -23,7 +19,7 @@ module Convert
 		def format_get_request hash_key
 			"<?xml version='1.0' encoding='utf-8' ?>
 			<queue>
-				<apiKey>#{ @api_key }</apiKey>
+				<apiKey>#{ @params["api_key"] }</apiKey>
 				<hash>#{ hash_key }</hash>
 			</queue>"
 		end

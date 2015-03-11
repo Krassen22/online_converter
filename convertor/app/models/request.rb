@@ -3,7 +3,10 @@ class Request < ActiveRecord::Base
 	
 	belongs_to :user
 
+	scope :newest, -> { where("created_at > ?", Time.now-1.day) }
+
 	def converted?
 		status == "Converted"
 	end
+
 end

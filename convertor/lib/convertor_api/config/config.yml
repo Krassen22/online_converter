@@ -1,0 +1,11 @@
+upload_url: 
+ http://www13.online-convert.com/queue-insert
+
+status_url:
+ http://api.online-convert.com/queue-status
+
+direct_download:
+ http://www13.online-convert.com/download-file/
+
+api_key:
+ d5f199db46752c458c9f2597ccd8e609

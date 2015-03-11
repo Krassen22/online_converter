@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305161654) do
+ActiveRecord::Schema.define(version: 20150310184718) do
+
+  create_table "levels", force: :cascade do |t|
+    t.string   "name",         null: false
+    t.decimal  "cost"
+    t.integer  "max_requests", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "requests", force: :cascade do |t|
     t.string   "source_url"
@@ -26,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150305161654) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer  "level_id",               default: 1
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

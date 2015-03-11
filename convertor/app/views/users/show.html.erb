@@ -5,7 +5,8 @@
 		<th>Source url</th>
 		<th>Media type</th>
 		<th>Convert to</th>
+		<th>Date created</th>
 		<th>Status</th>	
 	</tr>
-	<%= render @user.requests %>
+	<%= render @user.requests.newest %>
 </table>

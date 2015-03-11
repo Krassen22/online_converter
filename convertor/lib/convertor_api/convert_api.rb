@@ -10,8 +10,8 @@ module Convert
 		include GetConvertApi
 		include SendConvertApi
 
-		def initialize api_key
-			@api_key = api_key
+		def initialize
+			@params = get_config
 		end
 
 	end
@@ -20,7 +20,7 @@ end
 #testing 
 #=begin
 
-#convert = Convert::ConvertApi.new 'd5f199db46752c458c9f2597ccd8e609'
+#convert = Convert::ConvertApi.new
 #puts convert.send_request 'video', 'mp4', 'https://www.sit.auckland.ac.nz/wiki/images/9/9f/Sample.flv' 
 #puts convert.get_request '6e5bdc3b792b25456e62a5b60f1efb9a'
 

@@ -4,4 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :requests, dependent: :destroy
+	belongs_to :level
+
+	def has_requests?
+		requests.newest.size < level.max_requests
+	end
 end

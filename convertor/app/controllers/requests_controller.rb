@@ -6,7 +6,17 @@ class RequestsController < ApplicationController
 	end
 
 	def create
-		@request = Request.new(request_params)
+		@request = Request.new request_params
+		if current_user.has_requests?
+			create_request
+		else
+			set_error_messages "Request limit reached"
+		end
+	end
+
+	private
+	
+	def create_request
 		response = make_request
 		if response[:success]
 			set_values response
@@ -16,8 +26,6 @@ class RequestsController < ApplicationController
 		end
 	end
 
-	private
-	
 	def save_request
 		if @request.save
 			redirect_to root_path, notice: "New request was made" 
@@ -37,12 +45,12 @@ class RequestsController < ApplicationController
 	end
 
 	def set_error_messages error = nil
-		flash[:notice] = error || @request.errors.full_messages.join("<br />")
+		flash[:notice] ||= error || @request.errors.full_messages.join("<br />")
 		render 'index'
 	end
 
 	def make_request
-		convert = Convert::ConvertApi.new 'd5f199db46752c458c9f2597ccd8e609'
+		convert = Convert::ConvertApi.new
 		convert.send_request request_params 
 	end
 end

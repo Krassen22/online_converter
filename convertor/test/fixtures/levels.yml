@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+freeuser:
+ id: 1
+ name: "Free"
+ cost: 0
+ max_requests: 1
+
+
+paiduser:
+ id: 2
+ name: "Paid"
+ cost: 1.1
+ max_requests: 3
