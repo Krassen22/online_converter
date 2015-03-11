@@ -1,6 +1,9 @@
 require 'convertor_api/convert_api.rb'
 
 class RequestsController < ApplicationController
+	skip_before_action :verify_authenticity_token, only: [:update_status]
+	skip_before_action :authenticate_user!, only: [:update_status]
+	
 	def index
 		@request = Request.new
 	end
@@ -14,8 +17,32 @@ class RequestsController < ApplicationController
 		end
 	end
 
+	def update_status
+		if params["queue-answer"]
+			request_status_update
+		end
+		redirect_to root_path
+	end
+
 	private
+	## update status
 	
+	def request_status_update
+		response = parse_xml params["queue-answer"]
+		request = Request.match_hash response[:hash_key]
+		request.update status: set_status_message(response)
+	end
+
+	def set_status_message response
+		response[:converted] ? "Converted" : "Error"
+	end
+
+	def parse_xml xml_file
+		Convert::ConvertApi.get_request_values xml_file
+	end
+
+	## other
+
 	def create_request
 		response = make_request
 		if response[:success]

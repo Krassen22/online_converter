@@ -9,3 +9,6 @@ direct_download:
 
 api_key:
  d5f199db46752c458c9f2597ccd8e609
+
+notification_url:
+ http://host_ip:8520/convert_status/

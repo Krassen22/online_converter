@@ -9,4 +9,8 @@ class Request < ActiveRecord::Base
 		status == "Converted"
 	end
 
+	def self.match_hash hash_key
+		where("hash_key = ?", hash_key).first
+	end
+
 end

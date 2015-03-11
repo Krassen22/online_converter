@@ -20,14 +20,14 @@ module Convert
 			}
 		end
 
-		# <notificationUrl>url</notificationUrl>
 		def format_send_request type, convert_to, source
 			 "<?xml version='1.0' encoding='utf-8' ?>
-				<queue><apiKey>#{ @params["api_key"] }</apiKey>
+				<queue><apiKey>#{ @params['api_key'] }</apiKey>
 				<targetType>#{ type }</targetType>
 					<targetMethod>convert-to-#{ convert_to }</targetMethod>
 					<testMode>true</testMode>
 					<sourceUrl>#{ source }</sourceUrl>
+					<notificationUrl>#{ @params['notification_url'] }</notificationUrl>
 				</queue>"
 		end
 
