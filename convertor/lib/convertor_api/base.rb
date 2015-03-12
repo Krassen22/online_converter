@@ -4,7 +4,7 @@ require 'yaml'
 module Convert
 	module Base
 		def get_config
-			content = File.read "lib/convertor_api/config/config.yml"
+			content = File.read "#{ Rails.root }/config/convert_api_config.yml"
 			YAML.load content
 		end
 
