@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
 	get 'convert' => 'requests#index'
 	post 'convert_status' => 'requests#update_status'
+	get 'files/download/:hash' => 'requests#download', as: :file_download, constraints: { hash: /[^\/]+/ }
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

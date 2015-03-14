@@ -1,15 +1,11 @@
 <%= form_for @request do |f| %>
 		<div>
 			<%= f.label :source_url %>
-			<%= f.text_field :source_url, value: "https://www.sit.auckland.ac.nz/wiki/images/9/9f/Sample.flv" %>
-		</div>
-		<div>
-			<%= f.label :media_type %>
-			<%= f.text_field :media_type, value: "video" %>
+			<%= f.text_field :source_url, value: "http://www.online-image-editor.com//styles/2014/images/example_image.png" %>
 		</div>
 		<div>
 			<%= f.label :convert_to %>
-			<%= f.text_field :convert_to, value: "mp4" %>
+			<%= f.text_field :convert_to, value: "jpg" %>
 		</div>
 		<%= f.submit %>
 <% end %>

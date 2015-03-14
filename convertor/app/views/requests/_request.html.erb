@@ -1,8 +1,7 @@
 	<tr>
 		<td><%= request.source_url %></td>
-		<td><%= request.media_type %></td>
 		<td><%= request.convert_to %></td>
 		<td><%= request.created_at %></td>
 		<td><%= request.status %></td>
-		<td><a href="<%= request.download_link if request.converted? %>#">Download</a></td>
+		<td><a href="<%= file_download_path(request.download_file) if request.converted? %>#">Download</a></td>
 	</tr>

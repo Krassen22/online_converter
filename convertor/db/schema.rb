@@ -24,11 +24,9 @@ ActiveRecord::Schema.define(version: 20150310184718) do
   create_table "requests", force: :cascade do |t|
     t.string   "source_url"
     t.integer  "user_id"
-    t.string   "media_type"
     t.string   "convert_to"
-    t.string   "hash_key"
     t.string   "status",        default: "Converting.."
-    t.string   "download_link"
+    t.string   "download_file"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
   end
