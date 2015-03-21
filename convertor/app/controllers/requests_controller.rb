@@ -2,6 +2,9 @@ require 'convertor/convertor.rb'
 
 class RequestsController < ApplicationController
 
+	skip_before_action :verify_authenticity_token, only: [:convert_ready, :download]
+	skip_before_action :authenticate_user!, only: [:convert_ready, :download]
+
 	def index
 		@request = Request.new
 	end
@@ -19,6 +22,12 @@ class RequestsController < ApplicationController
 		send_file "lib/convertor/converted_files/" + params[:hash]
 	end
 
+	def convert_ready
+		request = Request.find_by(download_file: params[:file_name])
+		request.update status: params[:new_status]
+		redirect_to root_url
+	end	
+
 	private
 
 	def create_request
@@ -30,7 +39,6 @@ class RequestsController < ApplicationController
 	def set_values file
 		@request.download_file = file
 		@request.user = current_user
-		@request.status = "Converted" # remove
 	end
 
 	def convert 

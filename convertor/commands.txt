@@ -1,4 +1,4 @@
-rails server -b 0.0.0.0 -p 8520
+rails server -b 0.0.0.0 -p 3000
 
 ### Setup database ###
 rake db:drop
