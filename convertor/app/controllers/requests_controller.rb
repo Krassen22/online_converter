@@ -28,7 +28,23 @@ class RequestsController < ApplicationController
 		redirect_to root_url
 	end	
 
+	def destroy
+		@request = Request.find params[:id]
+		if @request.user == current_user
+			destroy_request
+			flash[:notice] = "Successfully deleted"
+		else	
+			flash[:notice] = "You can't delete this"
+		end
+		redirect_to :back
+	end
+
 	private
+
+	def destroy_request
+		Convert::Convert.remove_file @request.download_file
+		@request.destroy
+	end
 
 	def create_request
 		file = convert

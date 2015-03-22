@@ -13,6 +13,10 @@ module Convert
 				file
 			end
 
+			def remove_file file
+				`rm #{ FFmpeg.get_dir + file }`
+			end	
+
 			private 
 
 			def get_file_names format
@@ -24,10 +28,6 @@ module Convert
 			def make_name format
 				SecureRandom.urlsafe_base64(20).to_s + "." + format
 			end
-
-			def remove_file path
-				`rm #{ path }`
-			end	
 
 		end
 	end

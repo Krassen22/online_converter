@@ -1,0 +1,11 @@
+files_path:
+ lib/convertor/converted_files/
+
+notify_url:
+ http://localhost:3000/convert_ready/
+
+on_success:
+ Converted
+
+on_error:
+ Error
