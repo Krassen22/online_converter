@@ -4,7 +4,7 @@
 		<td><%= request.created_at %></td>
 		<td><%= request.status %></td>
 		<% if request.converted? %>
-		<td><a href="<%= file_download_path(request.download_file) %>">Download</a></td>
-		<td><%= link_to "Delete", request_path(request), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %></td>
+			<td><a href="<%= file_download_path(request.download_file) %>">Download</a></td>
+			<td><%= link_to "Delete", request_path(request), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %></td>
 		<% end %>
 	</tr>
