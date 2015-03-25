@@ -23,8 +23,7 @@ class RequestsController < ApplicationController
 	end
 
 	def convert_ready
-		request = Request.find_by(download_file: params[:file_name])
-		request.update status: params[:new_status]
+		update_status_and_notify
 		redirect_to root_url
 	end	
 
@@ -40,6 +39,13 @@ class RequestsController < ApplicationController
 	end
 
 	private
+
+	def update_status_and_notify
+		@request = Request.find_by(download_file: params[:file_name])
+		@request.update status: params[:new_status]
+
+		Notify.convert_ready(@request).deliver_now
+	end
 
 	def destroy_request
 		Convert::Convert.remove_file @request.download_file
