@@ -7,29 +7,43 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-<p class="navbar-text pull-right">
-<% if user_signed_in? %>
-	<%= link_to "Users", users_path %>
-	<%= link_to "Request", requests_path %>
-  Logged in as <strong><%= current_user.email %></strong>|Level: <strong><%= current_user.level %></strong>
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-<% [:notice, :alert].each do |message| %>
-	<%= flash[message] if flash[message] %>
-<% end %>
+<div class="header">
+	<div class="top">
+		<div class="top-left">
+			online convertor
+		</div>
+		<div class="top-right">
+			<%= get_user %>
+		</div>
+	</div>
+	<div class="nav">
+		<% if user_signed_in? %>
+			<ul class="nav_menu">
+				<li><%= nav_link "Users", users_path %></li>
+				<li><%= nav_link "Request", requests_path %></li>
+			</ul>
+			<ul class="nav_menu pull-right">
+				<li><%= nav_link 'Edit profile', edit_user_registration_path %></li>
+				<li><%= nav_link "Logout", destroy_user_session_path, method: :delete %></li>
+			</ul>
+		<% else %>
+			<ul class="nav_menu pull-right">		
+				<li><%= nav_link "Sign up", new_user_registration_path %></li>
+				<li><%= nav_link "Login", new_user_session_path %></li>
+			</ul>
+		<% end %>
+	</div>
+	<div class="error_messages">
+		<% [:notice, :alert].each do |message| %>
+			<%= flash[message] if flash[message] %>
+		<% end %>
+	</div>	
+</div>
+<div class="main_div">
+	<%= yield %>
+</div>
+<div class="footer">
 
-<hr />
-<%= yield %>
-
+</div>
 </body>
 </html>
