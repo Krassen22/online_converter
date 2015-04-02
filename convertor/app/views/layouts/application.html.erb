@@ -16,29 +16,46 @@
 			<%= get_user %>
 		</div>
 	</div>
-	<div class="nav">
-		<% if user_signed_in? %>
-			<ul class="nav_menu">
-				<li><%= nav_link "Users", users_path %></li>
-				<li><%= nav_link "Request", requests_path %></li>
-			</ul>
-			<ul class="nav_menu pull-right">
-				<li><%= nav_link 'Edit profile', edit_user_registration_path %></li>
-				<li><%= nav_link "Logout", destroy_user_session_path, method: :delete %></li>
-			</ul>
-		<% else %>
-			<ul class="nav_menu pull-right">		
-				<li><%= nav_link "Sign up", new_user_registration_path %></li>
-				<li><%= nav_link "Login", new_user_session_path %></li>
-			</ul>
-		<% end %>
-	</div>
-	<div class="error_messages">
-		<% [:notice, :alert].each do |message| %>
-			<%= flash[message] if flash[message] %>
-		<% end %>
-	</div>	
 </div>
+<div class="nav">
+	<% if user_signed_in? %>
+		<ul class="nav_menu">
+			<%= nav_link "Users", users_path %>
+			<%= nav_link "Request", requests_path %>
+		</ul>
+		<ul class="nav_menu pull-right">
+			<%= nav_link 'Edit profile', edit_user_registration_path %>
+			<%= nav_link "Logout", destroy_user_session_path, method: :delete %>
+		</ul>
+	<% else %>
+		<ul class="nav_menu pull-right">
+			<%= nav_link "Sign up", new_user_registration_path %>
+			<%= nav_link "Login", new_user_session_path %>
+		</ul>
+	<% end %>
+</div>
+<div class="error_messages">
+	<% [:notice, :alert].each do |message| %>
+		<%= flash[message] if flash[message] %>
+	<% end %>
+</div>
+<div class="banner_wrapper">
+  <div class="banner_image">
+  </div>
+</div>
+
+<div id="menu-wrapper">
+	<div id="main_menu">
+    <ul>
+      <li class="current_page_item"><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Convert</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+	</div>
+</div>
+
 <div class="main_div">
 	<%= yield %>
 </div>
