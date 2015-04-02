@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def nav_link link_text, link_path, method: :get
-		link_to link_text, link_path, method: method
+		"<li>#{ link_to link_text, link_path, method: method }</li>".html_safe
 	end
 
 	def get_user

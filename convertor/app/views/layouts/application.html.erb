@@ -19,17 +19,17 @@
 	<div class="nav">
 		<% if user_signed_in? %>
 			<ul class="nav_menu">
-				<li><%= nav_link "Users", users_path %></li>
-				<li><%= nav_link "Request", requests_path %></li>
+				<%= nav_link "Users", users_path %>
+				<%= nav_link "Request", requests_path %>
 			</ul>
 			<ul class="nav_menu pull-right">
-				<li><%= nav_link 'Edit profile', edit_user_registration_path %></li>
-				<li><%= nav_link "Logout", destroy_user_session_path, method: :delete %></li>
+				<%= nav_link 'Edit profile', edit_user_registration_path %>
+				<%= nav_link "Logout", destroy_user_session_path, method: :delete %>
 			</ul>
 		<% else %>
 			<ul class="nav_menu pull-right">		
-				<li><%= nav_link "Sign up", new_user_registration_path %></li>
-				<li><%= nav_link "Login", new_user_session_path %></li>
+				<%= nav_link "Sign up", new_user_registration_path %>>
+				<%= nav_link "Login", new_user_session_path %>
 			</ul>
 		<% end %>
 	</div>
