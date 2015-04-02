@@ -1,6 +1,11 @@
 .main_div {
-  padding: 0px 0px 0px 1%;
+  padding: 0px 0px 1% 1%;
 	margin: 0px;
 	background: #666;
-  border: 1px solid red;
+  border-top: 1px solid #ccc;
 }
+
+.main_div a {
+	color: #ff6600;
+}
+

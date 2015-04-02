@@ -17,5 +17,6 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	background: #fff;
+	background-color: #fff;
+	background-image: url('/assets/ios-linen.jpg')	
 }

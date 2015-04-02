@@ -1,0 +1,6 @@
+.error_messages {
+	background-color: red;
+	color: #000;
+	text-transform: uppercase;
+  text-indent: 5%;
+}

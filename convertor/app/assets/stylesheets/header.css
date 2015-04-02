@@ -1,26 +1,39 @@
 /* top part */
 
 .header {
-	background-color: #333;
+	/*background-color: #333;*/
+	/*background-image: url('/assets/...')*/
 }
 
 .header .top {
-	padding: 2vmax 10% 2vmax 10%;
+	padding: 2vmax 10% 2vmax 7%;
 }
 
 .header .top .top-left {
 	text-transform: capitalize;
+	font-family: Corbert;
+	text-indent: 2%;
 	font-size: 3vmax;
 	font-weight: bold;
-	background-color: #666;
+	background-color: #999;
+	border: 0.2vmax solid white;
+	border-radius: 20px;
+
 }
 
 .header .top .top-right {
-	font-size: 1.2vmax;
+	font-size: 1.3vmax;
 	margin: 0;
 	float: right;
+	
 }
 
 .header .top .top-right span {
 	font-style: italic;
+	color: #999;
+}
+
+@font-face {
+    font-family: Corbert;
+    src: url('/assets/Corbert-Regular.otf'); format("opentype");
 }
