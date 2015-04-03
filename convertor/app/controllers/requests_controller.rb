@@ -11,7 +11,6 @@ class RequestsController < ApplicationController
 
 	def create
 		@request = Request.new request_params
-		@converters = Converter.all
 		if current_user.has_requests?
 			create_request
 		else
