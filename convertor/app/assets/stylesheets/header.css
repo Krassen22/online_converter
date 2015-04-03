@@ -22,6 +22,7 @@
 }
 
 .header .top .top-right {
+	padding-top: 0.5%;	
 	font-size: 1.3vmax;
 	margin: 0;
 	float: right;
