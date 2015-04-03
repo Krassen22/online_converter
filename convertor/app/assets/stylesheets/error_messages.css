@@ -1,6 +1,14 @@
 .error_messages {
-	background-color: red;
 	color: #000;
 	text-transform: uppercase;
   text-indent: 5%;
+	text-align: center;
+}
+
+.error_messages .alert-success {
+	background-color: green;
+}
+
+.error_messages .alert-danger {
+	background-color: red;
 }

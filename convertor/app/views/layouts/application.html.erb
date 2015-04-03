@@ -21,31 +21,27 @@
 
 <div class="nav">
 	<ul class="nav_menu">
-		<li class="current_page_item"><a href="#">Home</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Convert</a></li>
-    <li><a href="#">Contact</a></li>
- 		<li><a href="#">About</a></li>
-	<% if user_signed_in? %>
-		<ul class="nav_menu">
-			<%= nav_link "Users", users_path %>
-			<%= nav_link "Request", requests_path %>
-		</ul>
-		<ul class="nav_menu pull-right">
-			<%= nav_link 'Edit profile', edit_user_registration_path %>
-			<%= nav_link "Logout", destroy_user_session_path, method: :delete %>
-		</ul>
-	<% else %>
-		<ul class="nav_menu pull-right">
-			<%= nav_link "Sign up", new_user_registration_path %>
-			<%= nav_link "Login", new_user_session_path %>
-		</ul>
-	<% end %>
+		<%= nav_link "Home", root_path %>
+		<%= nav_link "News", '#' %>
+		<% if user_signed_in? %>
+			<%= nav_link "Convert", requests_path %>
+			<%= nav_link "Requests", current_user %>
+			<ul class="nav_menu pull-right">
+				<%= nav_link "Edit profile", edit_user_registration_path %>
+				<%= nav_link "Logout", destroy_user_session_path, method: :delete %>
+			</ul>
+		<% else %>
+			<ul class="nav_menu pull-right">
+				<%= nav_link "Sign up", new_user_registration_path %>
+				<%= nav_link "Login", new_user_session_path %>
+			</ul>
+		<% end %>
+		<%= nav_link "Contact", '#' %>
+		<%= nav_link "About", '#' %>
+	</ul>
 </div>
 <div class="error_messages">
-	<% [:notice, :alert].each do |message| %>
-		<%= flash[message] if flash[message] %>
-	<% end %>
+	<%= set_messages %>
 </div>
 <div class="banner_wrapper">
   <div class="banner_image">
