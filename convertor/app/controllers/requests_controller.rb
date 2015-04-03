@@ -11,6 +11,7 @@ class RequestsController < ApplicationController
 
 	def create
 		@request = Request.new request_params
+		@converters = Converter.all
 		if current_user.has_requests?
 			create_request
 		else
@@ -33,7 +34,7 @@ class RequestsController < ApplicationController
 			destroy_request
 			flash[:notice] = "Successfully deleted"
 		else	
-			flash[:notice] = "You can't delete this"
+			flash[:alert] = "You can't delete this"
 		end
 		redirect_to :back
 	end
@@ -80,7 +81,7 @@ class RequestsController < ApplicationController
 	end
 	
 	def set_error_messages error = nil
-		flash[:notice] = error || @request.errors.full_messages.join("<br />")
+		flash[:alert] = error || @request.errors.full_messages.join("<br />")
 		render 'index'
 	end
 

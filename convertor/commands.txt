@@ -3,5 +3,6 @@ rails server -b 0.0.0.0 -p 3000
 ### Setup database ###
 rake db:drop
 rake db:migrate
-rake db:fixtures:load FIXTURES=levels
+rake db:fixtures:load FIXTURES=levels, FIXTURES=formats, FIXTURES=converters
+
 

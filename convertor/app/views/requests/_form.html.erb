@@ -1,11 +1,14 @@
-<%= form_for @request do |f| %>
-		<div>
-			<%= f.label :source_url %>
-			<%= f.text_field :source_url, value: "http://www.online-image-editor.com//styles/2014/images/example_image.png" %>
-		</div>
-		<div>
-			<%= f.label :convert_to %>
-			<%= f.text_field :convert_to, value: "jpg" %>
-		</div>
-		<%= f.submit %>
-<% end %>
+<div class="form"> 
+	<div class="form-title">Converter</div>	
+		<%= form_for @request do |f| %>
+				<div>
+					<%= f.label :source_url %>
+					<%= f.text_field :source_url, value: "http://www.online-image-editor.com//styles/2014/images/example_image.png" %>
+				</div>
+				<div>
+					<%= f.label :convert_to %>
+					<%= f.text_field :convert_to, value: "jpg" %>
+				</div>
+				<%= f.submit %>
+		<% end %>
+</div>

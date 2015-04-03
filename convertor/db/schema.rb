@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310184718) do
+ActiveRecord::Schema.define(version: 20150403100957) do
+
+  create_table "converters", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "formats", force: :cascade do |t|
+    t.string   "format"
+    t.boolean  "encoding",     default: true
+    t.boolean  "decoding",     default: true
+    t.integer  "converter_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "levels", force: :cascade do |t|
     t.string   "name",         null: false
