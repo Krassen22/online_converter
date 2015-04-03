@@ -23,7 +23,9 @@ Rails.application.routes.draw do
 
 	resources :requests
 	post 'convert_ready/:file_name' => 'requests#convert_ready', constraints: { file_name: /[^\/]+/ }
+
 	resources :users
+	get 'my_requests' => 'users#show_requests', as: :my_requests
 
   # Example resource route with options:
   #   resources :products do
