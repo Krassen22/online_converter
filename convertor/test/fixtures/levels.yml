@@ -8,11 +8,11 @@ freeuser:
  id: 1
  name: "Free"
  cost: 0
- max_requests: 1
+ max_requests: 300
 
 
 paiduser:
  id: 2
  name: "Paid"
  cost: 1.1
- max_requests: 3
+ max_requests: 400

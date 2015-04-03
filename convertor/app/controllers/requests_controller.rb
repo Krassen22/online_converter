@@ -5,7 +5,8 @@ class RequestsController < ApplicationController
 	skip_before_action :verify_authenticity_token, only: [:convert_ready, :download]
 	skip_before_action :authenticate_user!, only: [:convert_ready, :download]
 
-	def index
+	def show
+		@converter = get_converter
 		@request = Request.new
 	end
 
@@ -39,6 +40,11 @@ class RequestsController < ApplicationController
 	end
 
 	private
+
+	def get_converter
+		record = params[:id].to_i-1 || 0
+		Converter.limit(1).offset(record).first
+	end
 
 	def update_status_and_notify
 		@request = Request.find_by(download_file: params[:file_name])

@@ -1,5 +1,6 @@
 class Request < ActiveRecord::Base
 	validates :source_url, length: { minimum: 5 }	
+	validates :convert_to, presence: true, allow_blank: false
 	
 	belongs_to :user
 

@@ -10,9 +10,9 @@ module ApplicationHelper
 	end
 
 	def set_messages
-		messages = ""
-		messages.concat("<div class='alert-success'>#{ notice }</div>") if notice
-		messages.concat("<div class='alert-danger'>#{ alert }</div>") if alert
-		messages.html_safe
+		"".tap do |messages|
+			messages.concat("<div class='alert-success'>#{ notice }</div>") if notice
+			messages.concat("<div class='alert-danger'>#{ alert }</div>") if alert
+		end.html_safe
 	end
 end
