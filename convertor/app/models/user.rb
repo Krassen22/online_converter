@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :requests, dependent: :destroy
+	has_many :converter_apis
 	belongs_to :level
 
 	def has_requests?

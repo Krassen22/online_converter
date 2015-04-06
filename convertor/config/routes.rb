@@ -27,6 +27,13 @@ Rails.application.routes.draw do
 	resources :users
 	get 'my_requests' => 'users#show_requests', as: :my_requests
 
+	# converter_api
+	scope 'converter_api' do
+		get 'login' => 'converter_api#login'
+		get 'get_requests/:token' => 'converter_api#get_requests'
+	end
+	#	end 
+
   # Example resource route with options:
   #   resources :products do
   #     member do
