@@ -1,7 +1,10 @@
 require 'digest/sha1'
 
 class ConverterApiController < ApplicationController
-	before_action :set_user, except: [:login]
+
+	include CreateRequest
+
+	before_action :check_token, except: [:login]
 
 	skip_before_action :verify_authenticity_token
 	skip_before_action :authenticate_user!
@@ -12,7 +15,13 @@ class ConverterApiController < ApplicationController
 	end
 
 	def get_requests
-		render json: @current_user.requests.as_json(only: [:download_file])
+		requests = current_user.requests.where("id > ?", params[:id])
+		render json: requests.as_json(only: [:id, :status, :source_url, :download_file])
+	end
+
+	def make_request
+		make_new_request
+		render plain: "Success"
 	end
 
 	private 
@@ -22,7 +31,7 @@ class ConverterApiController < ApplicationController
 		if user && user.valid_password?(params[:password])
 			set_session user
 		else
-			"Error"
+			set_error_messages "Error"
 		end
 	end
 
@@ -36,17 +45,26 @@ class ConverterApiController < ApplicationController
 		Digest::SHA1.hexdigest params[:email] + ConverterApi.count.to_s
 	end
 
+	def current_user
+		current_user ||= set_user
+	end
+
 	def set_user
 		token = ConverterApi.find_by(token: token_params)
-		if token
-			@current_user = token.user
-		else 
-			render plain: "Error"
-		end
+		token.user
+	end
+
+	def check_token
+		set_error_messages "Error" if ConverterApi.find_by(token: token_params).nil?
 	end
 
 	def token_params
 		params.require(:token)
 	end	
+
+	def set_error_messages error = nil
+		error_message = error || @request.errors.full_messages.join("|")
+		render plain: error_message
+	end
 	
 end

@@ -2,6 +2,8 @@ require 'convertor/convertor.rb'
 
 class RequestsController < ApplicationController
 
+	include CreateRequest
+
 	skip_before_action :verify_authenticity_token, only: [:convert_ready, :download]
 	skip_before_action :authenticate_user!, only: [:convert_ready, :download]
 
@@ -11,12 +13,8 @@ class RequestsController < ApplicationController
 	end
 
 	def create
-		@request = Request.new request_params
-		if current_user.has_requests?
-			create_request
-		else
-			set_error_messages "Request limit reached"
-		end
+		make_new_request
+		redirect_to root_path, notice: "New request was made" 
 	end
 
 	def download
@@ -58,36 +56,9 @@ class RequestsController < ApplicationController
 		@request.destroy
 	end
 
-	def create_request
-		file = convert
-		set_values file
-		save_request
-	end
-
-	def set_values file
-		@request.download_file = file
-		@request.user = current_user
-	end
-
-	def convert 
-		Convert::Convert.convert params[:request]
-	end
-
-	def save_request
-		if @request.save
-			redirect_to root_path, notice: "New request was made" 
-		else
-			set_error_messages
-		end
-	end
-
-	def request_params
-		params.require(:request).permit(:convert_to, :source_url)
-	end
-	
 	def set_error_messages error = nil
 		flash[:alert] = error || @request.errors.full_messages.join("<br />")
-		render 'index'
+		redirect_to action: 'show', id: params[:id]
 	end
 
 end

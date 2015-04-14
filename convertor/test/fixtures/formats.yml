@@ -5,10 +5,18 @@
 # below each fixture, per the syntax in the comments below
 #
 
-imagesjpg:
- format: jpg
+# images
+<% formats = ["jpg", "png"] %>
+<% formats.each do |format| %>
+images<%= format %>:
+ format: <%= format %>
  converter: imagesconverter
+<% end %>
 
-videosflv:
- format: flv
+# video
+<% formats = ["flv"] %>
+<% formats.each do |format| %>
+videos<%= format %>:
+ format: <%= format %>
  converter: videoconverter
+<% end %>
