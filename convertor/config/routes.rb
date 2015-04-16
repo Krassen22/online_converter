@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 	scope 'converter_api' do
 		post 'login' => 'converter_api#login'
 		get 'get_requests/:token/:id' => 'converter_api#get_requests'
-		post 'make_request/:token' => 'converter_api#make_request'
+		post 'make_request' => 'converter_api#make_request'
 	end
 	#	end 
 

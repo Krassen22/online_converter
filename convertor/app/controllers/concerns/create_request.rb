@@ -1,4 +1,6 @@
 module CreateRequest
+	require 'convertor/convertor.rb'
+
 	extend ActiveSupport::Concern
 
 	def make_new_request

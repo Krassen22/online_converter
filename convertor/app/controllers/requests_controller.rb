@@ -1,5 +1,3 @@
-require 'convertor/convertor.rb'
-
 class RequestsController < ApplicationController
 
 	include CreateRequest
