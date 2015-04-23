@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+	<TextView
+		android:singleLine="true"
+	    android:id="@+id/irequest_row_file"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/example"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	<TextView
+	    android:id="@+id/irequest_row_id"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/request_row_id" />
+
+	<TextView
+	    android:id="@+id/irequest_row_status"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/request_row_status" />
+
+	<TextView
+	    android:id="@+id/irequest_row_converted_file"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/request_row_converted_file" />
+
+</LinearLayout>
+<!-- From: file:/home/kalin/workspace/Convertor/res/layout/request_row.xml -->
