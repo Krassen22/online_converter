@@ -52,4 +52,20 @@ ul.nav_menu li {
     src: url('/assets/Corbert-Regular.otf'); format("opentype");
 }
 
+/*
+	converter nav
+*/
+
+.data-converter-type-navigation {
+	border: solid 1px white;
+	border-radius: 0px 5px 0px 5px;
+	padding: 3px;
+	text-decoration: none;
+	margin-right: 15px;
+	font-size: 2vmax;
+}
+
+.data-converter-type-navigation:hover{
+	color: white;
+} 
 

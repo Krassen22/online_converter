@@ -4,7 +4,7 @@ class ConverterApiController < ApplicationController
 
 	include CreateRequest
 
-	before_action :check_token, except: [:login]
+	before_action :check_token, except: [:login, :register]
 
 	skip_before_action :verify_authenticity_token
 	skip_before_action :authenticate_user!
@@ -12,6 +12,16 @@ class ConverterApiController < ApplicationController
 	def login
 		token = get_user_token
 		render plain: token
+	end
+
+	def register
+		user = User.new user_params
+
+		if user.save && params[:confirm_password] == params[:password]
+			render plain: "Success"
+		else	
+			render plain: "Error"
+		end
 	end
 
 	def get_requests
@@ -61,6 +71,10 @@ class ConverterApiController < ApplicationController
 	def token_params
 		params.require(:token)
 	end	
+
+	def user_params
+		params.permit(:email, :password)	
+	end
 
 	def set_error_messages error = nil
 		error_message = error || @request.errors.full_messages.join("|")

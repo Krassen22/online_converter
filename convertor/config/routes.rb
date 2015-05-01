@@ -30,6 +30,7 @@ Rails.application.routes.draw do
 	# converter_api
 	scope 'converter_api' do
 		post 'login' => 'converter_api#login'
+		post 'register'=> 'converter_api#register'
 		get 'get_requests/:token/:id' => 'converter_api#get_requests'
 		post 'make_request' => 'converter_api#make_request'
 	end
