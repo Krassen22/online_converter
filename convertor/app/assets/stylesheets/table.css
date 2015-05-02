@@ -1,0 +1,28 @@
+/*
+	request table 
+*/
+
+.request_show_table {
+	width: 100%;
+	max-width: 900px;
+	border: 4px solid black; 
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.request_show_table tr * {
+	padding: 8px;
+}
+
+.request_show_table tr:not(.table_header):hover {
+	background-color: #d9d9d9;
+}
+
+
+.request_show_table .table_header {
+	padding: 10px;
+	background-color: black; 
+	color: white; 
+	font-weight: bold; 
+	border: 1px solid white;
+}

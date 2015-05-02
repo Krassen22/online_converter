@@ -1,0 +1,35 @@
+.form {
+	padding-bottom: 10px;
+	margin: 0px auto;
+	text-align: center;
+	border: 1px solid black;
+	width: 100%;
+	max-width: 400px;
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.form * {
+	margin: 0px auto;
+	padding: 2px;
+}
+
+.form form input[type="submit"] {
+	border-radius: 40px;
+}
+
+.form form * {
+	display: block;
+}
+
+.form form input {
+	width: 80%;
+}
+
+.form .form-title {
+	text-align: center;
+	font-size: x-large;	
+	color: white;
+	border-radius: 10px 10px 0px 0px;
+	background-color: black;
+}
