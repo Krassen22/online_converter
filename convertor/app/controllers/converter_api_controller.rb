@@ -31,7 +31,7 @@ class ConverterApiController < ApplicationController
 
 	def make_request
 		make_new_request
-		render plain: "Success"
+		render plain: "Success" unless performed?
 	end
 
 	private 

@@ -9,6 +9,7 @@ freeuser:
  name: "Free"
  cost: 0
  max_requests: 300
+ max_bytes: 100000000
 
 
 paiduser:
@@ -16,3 +17,4 @@ paiduser:
  name: "Paid"
  cost: 1.1
  max_requests: 400
+ max_bytes: 1000000000 

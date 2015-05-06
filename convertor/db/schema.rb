@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150406090242) do
 
   create_table "levels", force: :cascade do |t|
     t.string   "name",         null: false
+    t.integer  "max_bytes"
     t.decimal  "cost"
     t.integer  "max_requests", null: false
     t.datetime "created_at",   null: false

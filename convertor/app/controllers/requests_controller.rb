@@ -11,8 +11,10 @@ class RequestsController < ApplicationController
 	end
 
 	def create
-		make_new_request
-		redirect_to root_path, notice: "New request was made" 
+		set_upload_file
+		make_new_request unless performed?
+		delete_uploaded_file
+		redirect_to root_path, notice: "New request was made" unless performed?
 	end
 
 	def download
@@ -37,6 +39,14 @@ class RequestsController < ApplicationController
 
 	private
 
+	def delete_uploaded_file
+		`rm -f #{ get_uploaded_file }`
+	end
+
+	def set_upload_file
+		params[:request][:source_url] = get_uploaded_file.path if get_uploaded_file
+	end
+
 	def get_converter
 		record = params[:id].to_i-1 || 0
 		Converter.limit(1).offset(record).first
@@ -52,6 +62,10 @@ class RequestsController < ApplicationController
 	def destroy_request
 		Convert::Convert.remove_file @request.download_file
 		@request.destroy
+	end
+
+	def get_uploaded_file
+		params[:request][:file]
 	end
 
 	def set_error_messages error = nil

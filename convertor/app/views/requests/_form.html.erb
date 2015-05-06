@@ -3,11 +3,15 @@
 		<%= form_for @request do |f| %>
 				<div>
 					<%= f.label :source_url %>
-					<%= f.text_field :source_url, value: "http://met.live.mediaspanonline.com/assets/31069/example-608web_w608.jpg" %>
+					<%= f.text_field :source_url, placeholder: "FILE URL" %>
 				</div>
 				<div>
 					<%= f.label :convert_to %>
 					<%= f.select :convert_to, options_from_collection_for_select( @converter.formats, "format", "format" ) %>
+				</div>
+				<div>
+					<%= f.label "Upload file" %>
+					<%= f.file_field :file %>
 				</div>
 				<%= f.submit %>
 		<% end %>

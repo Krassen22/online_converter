@@ -5,6 +5,7 @@ module CreateRequest
 
 	def make_new_request
 		@request = Request.new request_params
+		set_error_messages "File too large" and return unless valid_file? get_file_path
 		if current_user.has_requests?
 			create_request
 		else
@@ -24,13 +25,19 @@ module CreateRequest
 	end
 
 	def save_request
-		unless @request.save
-			set_error_messages
-		end
+		set_error_messages unless @request.save
+	end
+
+	def valid_file? file
+		file.size < current_user.level.max_bytes.bytes
 	end
 
 	def convert 
 		Convert::Convert.convert request_params
+	end
+
+	def get_file_path
+		params[:request][:source_url]
 	end
 
 	def request_params
