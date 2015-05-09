@@ -1,18 +1,18 @@
 /* Banner */
 
 .banner_wrapper {
-	clear: both;
 	background-color: #666;
-	width: 100%;
-	height: 180px;
 	border-bottom: 1vmax solid #000;
+	clear: both;
+	height: 180px;
 	margin: 0px auto 1% auto;
+	width: 100%;
 }
 
 .banner_image {
 	background: url('/assets/rsz_golden-sky-mountains-header.jpg') #333 no-repeat scroll bottom;
+	height: 100%;
+	margin: 0px auto;
+	padding: 0px 10%;
 	width: 70%;
-  height: 100%;
-  margin: 0px auto;
-  padding: 0px 10%;
 }

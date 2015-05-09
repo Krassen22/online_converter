@@ -1,18 +1,18 @@
 .login-register-form {
-	padding-bottom: 10px;
-	margin: 0px auto;
-	text-align: center;
-	border: 1px solid black;
-	width: 100%;
-	max-width: 400px;
 	background-color: white;
 	border-radius: 10px 10px 0px 0px;
+	border: 1px solid black;
+	margin: 0px auto;
+	max-width: 400px;
+	padding-bottom: 10px;
+	text-align: center;
+	width: 100%;
 }
 
 .login-register-form .form-title {
+	background-color: #e6e6e6;
 	border-radius: 10px 10px 0px 0px;
 	font-size: xx-large;
-	background-color: #e6e6e6;
 }
 
 .login-register-form * {
@@ -21,17 +21,17 @@
 }
 
 .login-register-form .form-title input {
-	padding: 0px;
 	margin: 0px;
+	padding: 0px;
 }
 
 .login-register-form form input[type="submit"] {
+	background: linear-gradient(to bottom, #71BAFF, #357EC7);
+	border-radius: 10px;
+	border: 1px solid black;
 	color: white;
 	font-weight: bold;
 	padding: 10px;
-	border-radius: 10px;
-	border: 1px solid black;
-	background: linear-gradient(to bottom, #71BAFF, #357EC7);
 }
 
 .login-register-form form input[type="submit"]:hover {
@@ -40,8 +40,8 @@
 
 .login-register-form .field_with_errors {
 	display:inline;	
-	padding: 0px;
 	margin: 0px;
+	padding: 0px;
 }
 
 .login-register-form .field_with_errors label {

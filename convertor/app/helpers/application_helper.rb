@@ -6,7 +6,7 @@ module ApplicationHelper
 
 	def get_user
 		user, level = user_signed_in? ? [current_user.email, current_user.level] : ["Guest", "none"]
-		"Welcome <span>#{ user }</span> | Level: <span>#{ level }</span>".html_safe
+		"Welcome <span>#{ user }</span> | Level: <span>#{ link_to level, levels_path() }</span>".html_safe
 	end
 
 	def set_messages

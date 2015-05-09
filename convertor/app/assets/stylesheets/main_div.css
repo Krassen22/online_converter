@@ -1,8 +1,9 @@
 .main_div {
-  padding: 10px 1% 1% 1%;
-	margin: 0px;
 	background: #666;
-  border-top: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin: 0px;
+	padding: 10px 1% 1% 1%;
+	text-align: center;
 }
 
 .main_div a {

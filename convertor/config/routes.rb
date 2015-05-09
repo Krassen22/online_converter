@@ -27,7 +27,10 @@ Rails.application.routes.draw do
 	resources :users
 	get 'my_requests' => 'users#show_requests', as: :my_requests
 
-	# converter_api
+  resources :levels
+	post 'levels/upgrade/:level' => 'levels#upgrade', as: :level_upgrade
+
+  # converter_api
 	scope 'converter_api' do
 		post 'login' => 'converter_api#login'
 		post 'register'=> 'converter_api#register'

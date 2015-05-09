@@ -2,27 +2,37 @@
 	request table 
 */
 
-.request_show_table {
-	width: 100%;
-	max-width: 900px;
-	border: 4px solid black; 
+.request_show_table, .levels_table {
 	border-collapse: collapse;
+	border: 4px solid black; 
+	max-width: 900px;
 	text-align: center;
+	width: 100%;
 }
 
-.request_show_table tr * {
+.levels_table a {
+	text-decoration: none;
+}
+
+.request_show_table tr *, .levels_table tr *{
 	padding: 8px;
 }
 
-.request_show_table tr:not(.table_header):hover {
+.request_show_table tr:not(.table_header):hover, .levels_table tr:not(.table_header):hover {
 	background-color: #d9d9d9;
 }
 
 
-.request_show_table .table_header {
-	padding: 10px;
+table .table_header {
 	background-color: black; 
+	border: 1px solid white;
 	color: white; 
 	font-weight: bold; 
-	border: 1px solid white;
+	padding: 10px;
+}
+
+.table_title {
+	margin-bottom:10px;
+	font-size: 40px;
+	font-weight: bold;
 }

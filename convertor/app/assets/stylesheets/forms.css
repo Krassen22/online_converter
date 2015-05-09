@@ -1,12 +1,12 @@
 .form {
-	padding-bottom: 10px;
-	margin: 0px auto;
-	text-align: center;
-	border: 1px solid black;
-	width: 100%;
-	max-width: 400px;
 	background-color: white;
 	border-radius: 10px 10px 0px 0px;
+	border: 1px solid black;
+	margin: 0px auto;
+	max-width: 400px;
+	padding-bottom: 10px;
+	text-align: center;
+	width: 100%;
 }
 
 .form * {
@@ -28,9 +28,9 @@
 }
 
 .form .form-title {
-	text-align: center;
-	font-size: x-large;	
-	color: white;
-	border-radius: 10px 10px 0px 0px;
 	background-color: black;
+	border-radius: 10px 10px 0px 0px;
+	color: white;
+	font-size: x-large;	
+	text-align: center;
 }

@@ -1,34 +1,34 @@
 /* Navigation menu */
 
 .nav {
-	border: 1px solid #000;
-	overflow: hidden;
-	font-size: 20px;
 	background-color: #000;
-	width: 80%;
+	border: 1px solid #000;
+	font-size: 20px;
+	overflow: hidden;
 	padding: 0px 10% 0px 10%;
+	width: 80%;
 }
 
 ul.nav_menu {
 	color: white;
-	padding: 0px;
 	display: inline;
 	list-style-type: none;
+	padding: 0px;
 }
 
 ul.pull-right {
-	margin: 0px;
 	float: right;
 	font-size: 17px;
+	margin: 0px;
 	padding-top: 2px;
 }
 
 ul.nav_menu a {
-	margin: 0px;
+	color: white;
 	display: block;
+	margin: 0px;
 	padding: 1vw;
 	text-decoration: none;
-	color: white;
 }
 
 ul.nav_menu a:hover {
@@ -38,9 +38,9 @@ ul.nav_menu a:hover {
 
 ul.nav_menu .current_page_item a{
 	background-color: #000;
-	text-decoration: none;
-	color: #999;
 	border-bottom: 2px solid #999;
+	color: #999;
+	text-decoration: none;
 }
 
 ul.nav_menu li {
@@ -57,12 +57,12 @@ ul.nav_menu li {
 */
 
 .data-converter-type-navigation {
-	border: solid 1px white;
 	border-radius: 0px 5px 0px 5px;
+	border: solid 1px white;
+	font-size: 2vmax;
+	margin-right: 15px;
 	padding: 3px;
 	text-decoration: none;
-	margin-right: 15px;
-	font-size: 2vmax;
 }
 
 .data-converter-type-navigation:hover{

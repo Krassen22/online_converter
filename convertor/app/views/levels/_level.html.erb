@@ -1,0 +1,7 @@
+	<tr>
+		<td><%= level %></td>
+		<td><%= level.max_bytes %></td>
+		<td><%= level.max_requests %></td>
+		<td><%= level.cost.round(2) %>$</td>	
+		<td><%= link_to "Upgrade", level_upgrade_path(level), method: :post %></td>
+	</tr>

@@ -10,28 +10,28 @@
 }
 
 .header .top .top-left {
-	text-transform: capitalize;
+	background-color: #999;
+	border-radius: 20px;
+	border: 0.2vmax solid white;
 	font-family: Corbert;
-	text-indent: 2%;
 	font-size: 3vmax;
 	font-weight: bold;
-	background-color: #999;
-	border: 0.2vmax solid white;
-	border-radius: 20px;
-
+	text-indent: 2%;
+	text-transform: capitalize;
 }
 
 .header .top .top-right {
-	padding-top: 0.5%;	
+	color: white;
+	float: right;
 	font-size: 1.3vmax;
 	margin: 0;
-	float: right;
-	color: white;
+	padding-top: 0.5%;	
 }	
 
-.header .top .top-right span {
-	font-style: italic;
+.header .top .top-right span, .header .top .top-right span a {
 	color: #999;
+	font-style: italic;
+	text-decoration: none;
 }
 
 @font-face {
