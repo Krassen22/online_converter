@@ -33,7 +33,7 @@ module CreateRequest
 	end
 
 	def convert 
-		Convert::Convert.convert request_params
+		Convert::Convert.convert convert_params
 	end
 
 	def get_file_path
@@ -41,7 +41,13 @@ module CreateRequest
 	end
 
 	def request_params
-		params.require(:request).permit(:convert_to, :source_url)
+		params.require(:request).permit(:format_id, :source_url)
+	end
+
+	def convert_params
+		convert_params = request_params
+		convert_params[:convert_to] = @request.format.to_s
+		convert_params
 	end
 
 end

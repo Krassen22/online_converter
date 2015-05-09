@@ -24,7 +24,7 @@
 		<%= nav_link "Home", root_path %>
 		<%= nav_link "News", '#' %>
 		<% if user_signed_in? %>
-			<%= nav_link "Convert", request_path(1) %>
+			<%= nav_link "Convert", request_path(first_converter) %>
 			<%= nav_link "Requests", my_requests_path %>
 			<ul class="nav_menu pull-right">
 				<%= nav_link "Edit profile", edit_user_registration_path %>

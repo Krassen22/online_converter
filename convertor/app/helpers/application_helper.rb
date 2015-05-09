@@ -15,4 +15,8 @@ module ApplicationHelper
 			messages.concat("<div class='alert-danger'>#{ alert }</div>") if alert
 		end.html_safe
 	end
+
+	def first_converter
+		Converter.first.name
+	end
 end

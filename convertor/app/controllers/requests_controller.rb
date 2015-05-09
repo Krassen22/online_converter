@@ -48,8 +48,7 @@ class RequestsController < ApplicationController
 	end
 
 	def get_converter
-		record = params[:id].to_i-1 || 0
-		Converter.limit(1).offset(record).first
+		params[:id].nil? ? Converter.first : Converter.find_by(name: params[:id])
 	end
 
 	def update_status_and_notify

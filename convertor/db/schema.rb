@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20150406090242) do
   create_table "requests", force: :cascade do |t|
     t.string   "source_url"
     t.integer  "user_id"
-    t.string   "convert_to"
+    t.integer  "format_id"
     t.string   "status",        default: "Converting.."
     t.string   "download_file"
     t.datetime "created_at",                             null: false

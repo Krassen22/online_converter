@@ -10,7 +10,7 @@
 <% formats.each do |format| %>
 images<%= format %>:
  format: <%= format %>
- converter: imagesconverter
+ converter: Imagesconverter
 <% end %>
 
 # video
@@ -18,5 +18,5 @@ images<%= format %>:
 <% formats.each do |format| %>
 videos<%= format %>:
  format: <%= format %>
- converter: videoconverter
+ converter: Videosconverter
 <% end %>

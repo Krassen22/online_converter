@@ -6,8 +6,8 @@
 					<%= f.text_field :source_url, placeholder: "FILE URL" %>
 				</div>
 				<div>
-					<%= f.label :convert_to %>
-					<%= f.select :convert_to, options_from_collection_for_select( @converter.formats, "format", "format" ) %>
+					<%= f.label :format_id %>
+					<%= f.select :format_id, options_from_collection_for_select( @converter.formats, "id", "format" ) %>
 				</div>
 				<div>
 					<%= f.label "Upload file" %>
