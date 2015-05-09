@@ -45,9 +45,7 @@ module CreateRequest
 	end
 
 	def convert_params
-		convert_params = request_params
-		convert_params[:convert_to] = @request.format.to_s
-		convert_params
+		request_params.merge({ convert_to: @request.format.to_s })
 	end
 
 end
