@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Convertor</title>
+  <title>Converter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
 <div class="header">
 	<div class="top">
 		<div class="top-left">
-			online convertor
+			online converter
 		</div>
 		<div class="top-right">
 			<%= get_user %>
@@ -51,8 +51,11 @@
 <div class="main_div">
 	<%= yield %>
 </div>
-<div class="footer">
-
+<div class="footerholder">
+  <div class="footer">
+    <p>Contact information: <a href="online.converter.inc@gmail.com">online.converter.inc@gmail.com</a>.</p>
+      <p> © 2015 Online Converter, Inc. All rights reserved.</p>
+  </div>
 </div>
 </body>
 </html>

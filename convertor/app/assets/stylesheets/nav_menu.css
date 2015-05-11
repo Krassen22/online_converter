@@ -57,16 +57,17 @@ ul.nav_menu li {
 */
 
 .data-converter-type-navigation {
-	border-radius: 0px 5px 0px 5px;
+	background: #222;
+	border-radius: 0px 6px 0px 9px;
 	border: solid 1px white;
 	font-size: 2vmax;
 	margin-right: 15px;
-	padding: 3px;
+	padding: 3px 15px;
 	text-decoration: none;
+	color: #ff6600;
 }
 
 .data-converter-type-navigation:hover{
-	color: white;
-	background-color: #878787;
-} 
-
+	color: #ff6600;
+	background-color: black;
+}

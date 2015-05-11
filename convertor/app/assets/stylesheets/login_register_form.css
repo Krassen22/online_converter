@@ -1,5 +1,7 @@
+/* Login register forms */
+
 .login-register-form {
-	background-color: white;
+	background-color: #444;
 	border-radius: 10px 10px 0px 0px;
 	border: 1px solid black;
 	margin: 0px auto;
@@ -10,9 +12,10 @@
 }
 
 .login-register-form .form-title {
-	background-color: #e6e6e6;
+	background-color: black;
 	border-radius: 10px 10px 0px 0px;
 	font-size: xx-large;
+	color: #ff6600;
 }
 
 .login-register-form * {
@@ -26,7 +29,7 @@
 }
 
 .login-register-form form input[type="submit"] {
-	background: linear-gradient(to bottom, #71BAFF, #357EC7);
+	background: linear-gradient(to bottom, #ff6600, #222);
 	border-radius: 10px;
 	border: 1px solid black;
 	color: white;
@@ -35,11 +38,11 @@
 }
 
 .login-register-form form input[type="submit"]:hover {
-	background: linear-gradient(to bottom, #357EC7, #71BAFF);
+	background: linear-gradient(to bottom, #ff6600, #111);
 }
 
 .login-register-form .field_with_errors {
-	display:inline;	
+	display:inline;
 	margin: 0px;
 	padding: 0px;
 }

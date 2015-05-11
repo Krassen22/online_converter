@@ -1,8 +1,23 @@
+/* Footer */
+
+.footerholder {
+	background: #444;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+		height: 100px;
+}
+
 .footer {
-	background: #333;
-	border-bottom: 3px solid #222;
-	border-top: 3px solid #222;
-	height: 75px;
-	margin: 4px 0px;
-	padding: 0px 0px 0px 1%;
+		background: linear-gradient(to bottom, #111, #333);
+		color: white;
+    height: 70px;
+    margin: auto;
+    width: 100%;
+		padding-bottom: 10px;
+		padding-top: 2px;
+}
+
+.footer a {
+	color: #ff6600;
 }
