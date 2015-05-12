@@ -20,8 +20,8 @@
 	background: linear-gradient(to bottom, #ff6600, #222);
 	border-radius: 40px;
 	margin: 7px auto;
-	width: 80%;
-	padding: 4px;
+	width: 60%;
+	padding: 6px;
 }
 
 .form form input[type="submit"]:hover {
