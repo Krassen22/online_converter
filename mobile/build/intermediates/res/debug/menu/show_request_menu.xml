@@ -19,4 +19,4 @@
         android:showAsAction="ifRoom"
         android:title="@string/action_new"/>
 </menu>
-<!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/menu/show_request_menu.xml -->
+<!-- From: file:/home/kalin/workspace/Convertor/res/menu/show_request_menu.xml -->

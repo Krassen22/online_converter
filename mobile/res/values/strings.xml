@@ -20,6 +20,7 @@
 	<string name="website_url_update_requests">http://91.211.189.161:3000/converter_api/get_requests/</string>
 	<string name="website_url_download">http://91.211.189.161:3000/files/download/</string>
 	<string name="website_url_make_request">http://91.211.189.161:3000/converter_api/make_request/</string>
+	<string name="website_url_delete_request">http://91.211.189.161:3000/converter_api/delete_request/</string>
 	
 	<!-- request_row -->
 	<string name="request_row_id">id: </string>
@@ -34,4 +35,6 @@
 	<string name="create_request_url_hint">http://example.com/</string>
 	<string name="create_request_format_hint">convert format</string>
 	
+	<string name="dialog_ok">OK</string>
+	<string name="dialog_cancel">Cancel</string>
 </resources>

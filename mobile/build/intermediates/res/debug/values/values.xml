@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/dimens.xml -->
+    <!-- From: file:/home/kalin/workspace/Convertor/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/strings.xml -->
+    <!-- From: file:/home/kalin/workspace/Convertor/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_logout">Logout</string>
     <string name="action_new">New</string>
@@ -28,7 +28,7 @@
     <string name="website_url_login">http://91.211.189.161:3000/converter_api/login/</string>
     <string name="website_url_make_request">http://91.211.189.161:3000/converter_api/make_request/</string>
     <string name="website_url_update_requests">http://91.211.189.161:3000/converter_api/get_requests/</string>
-    <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/styles.xml -->
+    <!-- From: file:/home/kalin/workspace/Convertor/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

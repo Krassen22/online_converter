@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/libs/android-support-v4.jar"
+        jar="/home/kalin/workspace/Convertor/libs/android-support-v4.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28">
-        <dex dex="/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/build/intermediates/pre-dexed/debug/android-support-v4-8f576bbaabc2bb4d8138818aa6e1b0d3b02745cd.jar" />
+        <dex dex="/home/kalin/workspace/Convertor/build/intermediates/pre-dexed/debug/android-support-v4-6ece33f4a14604616a13031cee3a6124e56286a8.jar" />
     </item>
 
 </items>
