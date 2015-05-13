@@ -34,8 +34,23 @@ class ConverterApiController < ApplicationController
 		render plain: "Success" unless performed?
 	end
 
+	def delete_request
+		request = delete_get_request
+		
+		if request
+			request.destroy
+			render plain: "Success"
+		else
+			set_error_messages "Request not found"
+		end
+	end
+
 	private 
 	
+	def delete_get_request
+		current_user.requests.where("id = ?", params[:id]).first
+	end
+
 	def get_user_token
 		user = User.find_by email: params[:email]
 		if user && user.valid_password?(params[:password])

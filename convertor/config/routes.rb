@@ -36,6 +36,7 @@ Rails.application.routes.draw do
 		post 'register'=> 'converter_api#register'
 		get 'get_requests/:token/:id' => 'converter_api#get_requests'
 		post 'make_request' => 'converter_api#make_request'
+    post 'delete_request' => 'converter_api#delete_request'
 	end
 	#	end 
 
