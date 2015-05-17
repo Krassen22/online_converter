@@ -102,3 +102,36 @@ body {
 	text-decoration: underline;
 	color: #ff6600;
 }
+
+#our-team {
+	
+  	padding-top: 8%;
+  	width: 100%;
+}
+
+.each-team-mate {
+	border: 5px solid #999;
+	border-radius: 30px;
+	float: left;	
+	width: 25%;
+	height: 300px;
+	margin: 1em;
+	padding-top: 10px;
+	font: 30px helvetica, cursive, tahoma, arial, sans-serif;
+	color: #ff6600;	
+}
+
+.team-mate-image {
+	height: 70%;
+	padding-top: 4%;
+	border-top: 3px solid #333;
+	border-bottom: 3px solid #222;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+
+
+}
+
+.after-our-team {
+	clear: left;
+}
