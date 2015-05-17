@@ -1,0 +1,99 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #111;
+
+body {
+
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+
+
+/*   News  */
+
+/* Content */
+
+#content {
+	width: 80%;
+	margin: 0px auto;
+	padding-left: 60px;
+	border-left: 100px solid black;
+	border-top-left-radius: 70px;
+	border-bottom-left-radius: 30px;
+	background-color: #111;
+}
+
+/* Post */
+
+.post {
+	padding-bottom: 50px;
+	border-bottom: 1px dashed #666;
+}
+
+.title {
+	margin-bottom: 10px;
+	padding: 28px 0px 0px 0px;
+	font-size: 26px;
+	color: #ff6600;
+}
+
+.title a {
+	text-decoration: none;
+	color: #ff6600;
+}
+
+.meta {
+	height: 2%;
+	margin-bottom: px;
+	padding: 10px 0px 5px 0px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.meta .date {
+	float: left;
+	font: 18px helvetica, cursive, tahoma, arial, sans-serif;
+	font-weight: normal;
+	color: #999;
+}
+
+.meta .posted {
+	float: right;
+	font: 16px helvetica, cursive, tahoma, arial, sans-serif;
+	font-weight: normal;
+	padding-right: 10px;
+	color: #999;
+}
+
+.meta .posted a {
+	text-decoration: none;
+	color: #ff6600; 
+}
+
+.links {
+	padding: 10px 0px;
+	font: 16px tahoma, helvetica, cursive, arial, sans-serif;
+	font-weight: normal;
+	color: #999;
+}
+
+.entry {
+	padding: 15px 30px 0px 0px;
+	font: 20px tahoma, helvetica, cursive, arial, sans-serif;
+	font-weight: normal;
+	color: #999;
+	text-align: justify;
+}
+
+.post .entry img {
+	float: left;
+}
+
+.links a {
+	text-decoration: underline;
+	color: #ff6600;
+}

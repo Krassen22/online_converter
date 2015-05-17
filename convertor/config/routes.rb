@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-	
+
 	root 'requests#show'
 
   # Example of regular route:
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-	
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -38,7 +38,12 @@ Rails.application.routes.draw do
 		post 'make_request' => 'converter_api#make_request'
     post 'delete_request' => 'converter_api#delete_request'
 	end
-	#	end 
+
+  get '/about', to: 'pages#about'
+  get '/contact', to: 'pages#contact'
+  get '/news', to: 'pages#news'
+
+	#	end
 
   # Example resource route with options:
   #   resources :products do

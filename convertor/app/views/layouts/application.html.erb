@@ -23,7 +23,7 @@
 <div class="nav">
 	<ul class="nav_menu">
 		<%= nav_link "Home", root_path %>
-		<%= nav_link "News", '#' %>
+		<%= nav_link "News", news_path %>
 		<% if user_signed_in? %>
 			<%= nav_link "Convert", request_path(first_converter) %>
 			<%= nav_link "Requests", my_requests_path %>
@@ -37,8 +37,8 @@
 				<%= nav_link "Login", new_user_session_path %>
 			</ul>
 		<% end %>
-		<%= nav_link "Contact", '#' %>
-		<%= nav_link "About", '#' %>
+		<%= nav_link "Contact", contact_path %>
+		<%= nav_link "About", about_path %>
 	</ul>
 </div>
 <div class="error_messages">
