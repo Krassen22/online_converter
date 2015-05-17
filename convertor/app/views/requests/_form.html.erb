@@ -3,7 +3,7 @@
 		<%= form_for @request do |f| %>
 				<div>
 					<%= f.label :source_url %>
-					<%= f.text_field :source_url, placeholder: "FILE URL" %>
+					<%= f.text_field :source_url, placeholder: "FILE URL", value: @text_value %>
 				</div>
 				<div>
 					<%= f.label :format_id %>

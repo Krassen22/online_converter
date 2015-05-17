@@ -21,6 +21,7 @@ body {
 	width: 80%;
 	margin: 0px auto;
 	padding-left: 60px;
+	padding-right: 10px;
 	border-left: 100px solid black;
 	border-top-left-radius: 70px;
 	border-bottom-left-radius: 30px;
@@ -31,8 +32,12 @@ body {
 
 .post {
 	padding-bottom: 50px;
+}
+
+.post:not(:last-of-type) {
 	border-bottom: 1px dashed #666;
 }
+
 
 .title {
 	margin-bottom: 10px;

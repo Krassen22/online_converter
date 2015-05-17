@@ -11,7 +11,7 @@ module RequestsHelper
 			"<td><a href='#{ file_download_path(request.download_file) }'>Download</a></td>
 			<td>#{ link_to 'Delete', request_path(request), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } }</td>".html_safe
 		elsif request.error?
-			"<td colspan='2'>#{ link_to 'Retry', request_path(request.format.converter.name) }</td>".html_safe
+			"<td colspan='2'>#{ link_to 'Retry', request_path(request.format.converter.name, request_default_url: request.source_url) }</td>".html_safe
 		end
 	end
 

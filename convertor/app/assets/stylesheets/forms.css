@@ -19,9 +19,10 @@
 .form form input[type="submit"] {
 	background: linear-gradient(to bottom, #ff6600, #222);
 	border-radius: 40px;
+	color: white;
 	margin: 7px auto;
-	width: 60%;
 	padding: 6px;
+	width: 60%;
 }
 
 .form form input[type="submit"]:hover {

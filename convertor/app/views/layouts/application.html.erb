@@ -22,8 +22,7 @@
 
 <div class="nav">
 	<ul class="nav_menu">
-		<%= nav_link "Home", root_path %>
-		<%= nav_link "News", news_path %>
+		<%= nav_link "Home", news_path %>
 		<% if user_signed_in? %>
 			<%= nav_link "Convert", request_path(first_converter) %>
 			<%= nav_link "Requests", my_requests_path %>

@@ -6,6 +6,7 @@ class RequestsController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:convert_ready, :download]
 
 	def show
+		@text_value = get_default_url
 		@converter = get_converter
 		@request = Request.new
 	end
@@ -41,6 +42,10 @@ class RequestsController < ApplicationController
 
 	def delete_uploaded_file
 		`rm -f #{ get_uploaded_file }`
+	end
+
+	def get_default_url
+		params[:request_default_url]
 	end
 
 	def set_upload_file
