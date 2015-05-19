@@ -6,7 +6,7 @@
 #
 
 # images
-<% formats = ["jpg", "png"] %>
+<% formats = ["png", "gif", "jpg"] %>
 <% formats.each do |format| %>
 images<%= format %>:
  format: <%= format %>
@@ -14,9 +14,17 @@ images<%= format %>:
 <% end %>
 
 # video
-<% formats = ["flv"] %>
+<% formats = ["3g2", "3gp", "avi", "f4v", "mp4", "mkv", "mov", "flv",] %>
 <% formats.each do |format| %>
 videos<%= format %>:
  format: <%= format %>
  converter: Videosconverter
+<% end %>
+
+# audio
+<% formats = ["wav", "aiff", "mp3"] %>
+<% formats.each do |format| %>
+videos<%= format %>:
+ format: <%= format %>
+ converter: Audioconverter
 <% end %>

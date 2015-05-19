@@ -6,4 +6,9 @@ class UsersController < ApplicationController
 	def show_requests
 		@user = current_user
 	end
+
+	def clear_errors
+		Request.clear_errors current_user
+		redirect_to :back
+	end
 end

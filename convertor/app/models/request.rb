@@ -16,6 +16,10 @@ class Request < ActiveRecord::Base
 		status == "Error"
 	end
 
+	def self.clear_errors user
+		destroy_all status: "Error", user_id: user
+	end
+
 	def self.match_hash hash_key
 		where("hash_key = ?", hash_key).first
 	end

@@ -1,0 +1,13 @@
+// Online converter (website) //
+1. Every new user must register before use the site.
+2. Convert to more than one format:
+  - images: to jpg and png
+  - videos: to flv 
+3. Create beautiful and optimal *UI for use of the converter by user.
+4. Additional pages (Home, About, Contact) with the following purpose:
+  - user to have the necessary information for the converter. 
+  - user to have the necessary connection to the creators of the site (with our team).
+5. Option to be increased the number and the size of the files converted against payment of an amount by the customer.
+5. There will be an option for the user to convert bigger size files for an extra payment. Also more uploads can be done.
+
+* UI (user interface) - in our case, it's a simple and user-friendly website made by html, css and javascript.  
