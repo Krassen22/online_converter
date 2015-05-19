@@ -18,12 +18,13 @@ import android.os.AsyncTask;
 public class MainActivity extends Activity {
 
 	Button submit_button;
+	Button submit_reg_button;
 	EditText username_et;
 	EditText password_et;
-	
+
 	private String username;
 	private String password;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,10 +32,11 @@ public class MainActivity extends Activity {
 		check_if_logged_in();
 
 		setViews();
-		
+
 		submit_button.setOnClickListener(login_listener);
+		submit_reg_button.setOnClickListener(register_listener);
 	}
-	
+
 	private void check_if_logged_in() {
 		SharedPreferences settings = getSharedPreferences("token", MODE_PRIVATE);
 		if(!settings.getString("token", "").isEmpty())
@@ -43,15 +45,16 @@ public class MainActivity extends Activity {
 
 	private void setViews() {
 		submit_button = (Button) findViewById(R.id.login_button);
+		submit_reg_button = (Button) findViewById(R.id.register_button);
 		username_et = (EditText) findViewById(R.id.login_username);
 		password_et = (EditText) findViewById(R.id.login_password);
 	}
-	
+
 	private void get_input() {
 		username = username_et.getText().toString();
 		password = password_et.getText().toString();
 	}
-	
+
 	View.OnClickListener login_listener = new View.OnClickListener() {
 		public void onClick(View v) {
 			get_input();
@@ -59,7 +62,14 @@ public class MainActivity extends Activity {
 			new HttpRequest().execute(url);
 		}
 	};
-	
+
+	View.OnClickListener register_listener = new View.OnClickListener() {
+		public void onClick(View v) {
+			Intent i = new Intent(getApplicationContext(), Register.class);
+			startActivity(i);
+		}
+	};
+
 	private void handle_action(String token) {
 		if(token.equals("Error")) {
 			Toast.makeText(getApplicationContext(), "Wrong password or username", Toast.LENGTH_LONG).show();
@@ -68,12 +78,13 @@ public class MainActivity extends Activity {
 			login();
 		}
 	}
-	
+
 	private void login() {
 		Intent i = new Intent(getApplicationContext(), ShowRequests.class);
 		startActivity(i);
+		finish();
 	}
-	
+
 	private void set_token(String token) {
 		SharedPreferences settings = getSharedPreferences("token", MODE_PRIVATE);
 		Editor edit = settings.edit();
@@ -102,11 +113,4 @@ public class MainActivity extends Activity {
 	    }
 	}
 
-	@Override
-	protected void onStop() {
-		// TODO Auto-generated method stub
-		super.onStop();
-		finish();
-	}
-	
 }

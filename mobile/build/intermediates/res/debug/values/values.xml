@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/kalin/workspace/Convertor/res/values/dimens.xml -->
+    <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/kalin/workspace/Convertor/res/values/strings.xml -->
+    <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/strings.xml -->
     <eat-comment/>
+    <string name="Email_text">Email</string>
     <string name="action_logout">Logout</string>
     <string name="action_new">New</string>
     <string name="action_update">Update</string>
@@ -15,20 +16,25 @@
     <string name="create_request_submit">Submit</string>
     <string name="create_request_url">Url</string>
     <string name="create_request_url_hint">http://example.com/</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_ok">OK</string>
     <string name="example">Example</string>
     <string name="hello_world">Hello world!</string>
     <string name="login_password">Password</string>
+    <string name="login_password_hint">Password</string>
     <string name="login_username">Username</string>
     <string name="login_username_hint">Username</string>
     <string name="request_row_converted_file">converted:</string>
     <string name="request_row_id">id: </string>
     <string name="request_row_status">status: </string>
     <string name="submit_button">Login</string>
+    <string name="submit_reg_button">Register</string>
+    <string name="website_url_delete_request">http://91.211.189.161:3000/converter_api/delete_request/</string>
     <string name="website_url_download">http://91.211.189.161:3000/files/download/</string>
     <string name="website_url_login">http://91.211.189.161:3000/converter_api/login/</string>
     <string name="website_url_make_request">http://91.211.189.161:3000/converter_api/make_request/</string>
     <string name="website_url_update_requests">http://91.211.189.161:3000/converter_api/get_requests/</string>
-    <!-- From: file:/home/kalin/workspace/Convertor/res/values/styles.xml -->
+    <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
