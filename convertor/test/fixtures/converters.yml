@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 
-<% converters = ['Images', 'Videos'] %>
+<% converters = ['Images', 'Videos', 'Audio'] %>
 
 <% converters.each do |converter, index| %>
 <%= converter %>converter:

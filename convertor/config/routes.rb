@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
 	resources :users
 	get 'my_requests' => 'users#show_requests', as: :my_requests
+  delete 'clear_errors_requests' => 'users#clear_errors', as: :clear_errors_requests
 
   resources :levels
 	post 'levels/upgrade/:level' => 'levels#upgrade', as: :level_upgrade
@@ -36,7 +37,7 @@ Rails.application.routes.draw do
 		post 'register'=> 'converter_api#register'
 		get 'get_requests/:token/:id' => 'converter_api#get_requests'
 		post 'make_request' => 'converter_api#make_request'
-    post 'delete_request' => 'converter_api#delete_request'
+    delete 'delete_request' => 'converter_api#delete_request'
 	end
 
   get '/about', to: 'pages#about'
