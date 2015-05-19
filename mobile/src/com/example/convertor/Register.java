@@ -1,11 +1,19 @@
 package com.example.convertor;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import http.HttpPostRequest;
 
 
 /**
@@ -28,7 +36,7 @@ public class Register extends Activity {
         setContentView(R.layout.register_screen);
 
         setViews();
-        //submit_button.setOnClickListener(register_listener);
+        submit_button.setOnClickListener(register_listener);
     }
 
     private void get_input() {
@@ -43,11 +51,55 @@ public class Register extends Activity {
         password_conf_et = (EditText) findViewById(R.id.register_password_confirm);
     }
 
-//    View.OnClickListener register_listener = new View.OnClickListener() {
-//        public void onClick(View v) {
-//            get_input();
-//            String url = getResources().getString(R.string.website_url_login); // register
-//            new HttpRequest().execute(url);
-//        }
-//    }
-};
+    View.OnClickListener register_listener = new View.OnClickListener() {
+        public void onClick(View v) {
+            get_input();
+            String url = getResources().getString(R.string.website_url_register); // register
+            new HttpRequest().execute(url);
+        }
+    };
+
+    private void set_token(String token) {
+        SharedPreferences settings = getSharedPreferences("token", MODE_PRIVATE);
+        SharedPreferences.Editor edit = settings.edit();
+        edit.putString("token", token);
+        edit.apply();
+    }
+
+    private void login() {
+        Intent i = new Intent(getApplicationContext(), ShowRequests.class);
+        startActivity(i);
+        finish();
+    }
+
+    private void handle_action(String token) {
+        if(token.equals("Error")) {
+            Toast.makeText(getApplicationContext(), "Passwords are different", Toast.LENGTH_LONG).show();
+        } else {
+            set_token(token);
+            login();
+        }
+    }
+
+    public class HttpRequest extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... uri) {
+            JSONObject params = new JSONObject();
+            try {
+                params.put("email", username);
+                params.put("password", password);
+                params.put("confirm_password", conf_password);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return HttpPostRequest.make_request(uri[0], params);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            handle_action(result);
+        }
+    }
+}

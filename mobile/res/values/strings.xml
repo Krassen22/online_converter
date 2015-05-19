@@ -20,6 +20,7 @@
 
 	<!-- login screen java file -->
 	<string name="website_url_login">http://91.211.189.161:3000/converter_api/login/</string>
+	<string name="website_url_register">http://91.211.189.161:3000/converter_api/register/</string>
 	<string name="website_url_update_requests">http://91.211.189.161:3000/converter_api/get_requests/</string>
 	<string name="website_url_download">http://91.211.189.161:3000/files/download/</string>
 	<string name="website_url_make_request">http://91.211.189.161:3000/converter_api/make_request/</string>

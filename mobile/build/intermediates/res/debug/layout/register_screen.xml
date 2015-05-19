@@ -30,17 +30,17 @@
 
 
     <EditText
-        android:id="@+id/login_password"
+        android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_password_hint"
         android:ems="10"
         android:inputType="textPassword"
-        android:layout_below="@+id/login_password_tv"
+        android:layout_below="@+id/register_password_tv"
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:id="@+id/login_password_confirm"
+        android:id="@+id/register_password_confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_password_confirm_hint"
@@ -55,19 +55,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/submit_acc_button"
-        android:layout_below="@+id/login_password_confirm"
+        android:layout_below="@+id/register_password_confirm"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp" />
 
 
     <TextView
-        android:id="@+id/login_password_tv"
+        android:id="@+id/register_password_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_username"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:labelFor="@+id/login_password"
+        android:labelFor="@+id/register_password"
         android:text="@string/login_password"
         android:layout_marginBottom="16dp" />
 
@@ -75,10 +75,10 @@
         android:id="@+id/confirm_password_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirm Password"
+        android:text="@string/confirm_password_text"
         android:layout_alignParentStart="true"
-        android:labelFor="@+id/login_password_confirm"
+        android:labelFor="@+id/register_password_confirm"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="16dp"
-        android:layout_below="@+id/login_password" />
+        android:layout_below="@+id/register_password" />
 </RelativeLayout><!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/layout/register_screen.xml -->

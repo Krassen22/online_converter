@@ -6,11 +6,11 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/strings.xml -->
     <eat-comment/>
-    <string name="Email_text">Email</string>
     <string name="action_logout">Logout</string>
     <string name="action_new">New</string>
     <string name="action_update">Update</string>
     <string name="app_name">Convertor</string>
+    <string name="confirm_password_text">Confirm Password</string>
     <string name="create_request_format">Format</string>
     <string name="create_request_format_hint">convert format</string>
     <string name="create_request_submit">Submit</string>
@@ -35,6 +35,7 @@
     <string name="website_url_download">http://91.211.189.161:3000/files/download/</string>
     <string name="website_url_login">http://91.211.189.161:3000/converter_api/login/</string>
     <string name="website_url_make_request">http://91.211.189.161:3000/converter_api/make_request/</string>
+    <string name="website_url_register">http://91.211.189.161:3000/converter_api/register/</string>
     <string name="website_url_update_requests">http://91.211.189.161:3000/converter_api/get_requests/</string>
     <!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/values/styles.xml -->
     <eat-comment/>
