@@ -8,5 +8,6 @@
   - user to have the necessary information for the converter. 
   - user to have the necessary connection to the creators of the site (with our team).
 5. Option to be increased the number and the size of the files converted against payment of an amount by the customer.
+5. There will be an option for the user to convert bigger size files for an extra payment. Also more uploads can be done.
 
 * UI (user interface) - in our case, it's a simple and user-friendly website made by html, css and javascript.  
