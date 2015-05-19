@@ -29,39 +29,40 @@
     </EditText>
 
 
-    <TextView
-        android:id="@+id/login_password_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_username"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp"
-        android:labelFor="@+id/login_password"
-        android:text="@string/login_password"/>
-    
     <EditText
 		android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_password_hint"
-        android:layout_below="@+id/login_password_tv"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:layout_below="@+id/login_password_tv"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/submit_button"
-        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/register_button"
         android:layout_toEndOf="@+id/register_button" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit_reg_button"
         android:id="@+id/register_button"
-        android:layout_alignTop="@+id/login_button"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/login_password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:labelFor="@+id/login_password"
+        android:text="@string/login_password"
+        android:layout_marginBottom="16dp" />
 </RelativeLayout>

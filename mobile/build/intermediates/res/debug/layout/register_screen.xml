@@ -1,15 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:weightSum="1">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.convertor.MainActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/register_username_tv"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Email_text"
-        android:id="@+id/Email_text"
-        android:longClickable="false"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp" />
-</LinearLayout><!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/layout/register_screen.xml -->
+        android:layout_centerHorizontal="true"
+        android:labelFor="@+id/register_username"
+        android:text="@string/login_username" />
+
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_username_hint"
+        android:layout_below="@+id/register_username_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10">
+        <requestFocus />
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_password_hint"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_below="@+id/login_password_tv"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/login_password_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_password_confirm_hint"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/confirm_password_tv" />
+
+    <Button
+        android:id="@+id/account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_acc_button"
+        android:layout_below="@+id/login_password_confirm"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+
+    <TextView
+        android:id="@+id/login_password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:labelFor="@+id/login_password"
+        android:text="@string/login_password"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/confirm_password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:layout_alignParentStart="true"
+        android:labelFor="@+id/login_password_confirm"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/login_password" />
+</RelativeLayout><!-- From: file:/Users/dimmat97/Documents/Mitko/Documents/GitHub_Repos/online_converter/mobile/res/layout/register_screen.xml -->

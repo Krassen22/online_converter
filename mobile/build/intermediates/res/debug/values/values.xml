@@ -21,12 +21,14 @@
     <string name="example">Example</string>
     <string name="hello_world">Hello world!</string>
     <string name="login_password">Password</string>
-    <string name="login_password_hint">Password</string>
+    <string name="login_password_confirm_hint">re-password</string>
+    <string name="login_password_hint">password</string>
     <string name="login_username">Username</string>
-    <string name="login_username_hint">Username</string>
+    <string name="login_username_hint">example@mail.com</string>
     <string name="request_row_converted_file">converted:</string>
     <string name="request_row_id">id: </string>
     <string name="request_row_status">status: </string>
+    <string name="submit_acc_button">Create Account</string>
     <string name="submit_button">Login</string>
     <string name="submit_reg_button">Register</string>
     <string name="website_url_delete_request">http://91.211.189.161:3000/converter_api/delete_request/</string>

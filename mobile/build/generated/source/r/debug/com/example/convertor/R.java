@@ -20,24 +20,28 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int Email_text=0x7f08000b;
-        public static final int action_logout=0x7f080011;
-        public static final int action_new=0x7f080013;
-        public static final int action_update=0x7f080012;
+        public static final int account_button=0x7f08000f;
+        public static final int action_logout=0x7f080015;
+        public static final int action_new=0x7f080017;
+        public static final int action_update=0x7f080016;
+        public static final int confirm_password_tv=0x7f08000e;
         public static final int create_request_format=0x7f080003;
         public static final int create_request_submit=0x7f080004;
         public static final int create_request_url=0x7f080001;
-        public static final int irequest_row_converted_file=0x7f08000f;
-        public static final int irequest_row_file=0x7f08000c;
-        public static final int irequest_row_id=0x7f08000d;
-        public static final int irequest_row_status=0x7f08000e;
+        public static final int irequest_row_converted_file=0x7f080013;
+        public static final int irequest_row_file=0x7f080010;
+        public static final int irequest_row_id=0x7f080011;
+        public static final int irequest_row_status=0x7f080012;
         public static final int login_button=0x7f080009;
-        public static final int login_password=0x7f080008;
-        public static final int login_password_tv=0x7f080007;
+        public static final int login_password=0x7f080007;
+        public static final int login_password_confirm=0x7f08000d;
+        public static final int login_password_tv=0x7f080008;
         public static final int login_username=0x7f080006;
         public static final int login_username_tv=0x7f080005;
         public static final int register_button=0x7f08000a;
-        public static final int requests_list_view=0x7f080010;
+        public static final int register_username=0x7f08000c;
+        public static final int register_username_tv=0x7f08000b;
+        public static final int requests_list_view=0x7f080014;
         public static final int textView1=0x7f080000;
         public static final int textView2=0x7f080002;
     }
@@ -68,19 +72,21 @@ public final class R {
         public static final int example=0x7f06000c;
         public static final int hello_world=0x7f06000d;
         public static final int login_password=0x7f06000e;
-        public static final int login_password_hint=0x7f06000f;
-        public static final int login_username=0x7f060010;
-        public static final int login_username_hint=0x7f060011;
-        public static final int request_row_converted_file=0x7f060012;
-        public static final int request_row_id=0x7f060013;
-        public static final int request_row_status=0x7f060014;
-        public static final int submit_button=0x7f060015;
-        public static final int submit_reg_button=0x7f060016;
-        public static final int website_url_delete_request=0x7f060017;
-        public static final int website_url_download=0x7f060018;
-        public static final int website_url_login=0x7f060019;
-        public static final int website_url_make_request=0x7f06001a;
-        public static final int website_url_update_requests=0x7f06001b;
+        public static final int login_password_confirm_hint=0x7f06000f;
+        public static final int login_password_hint=0x7f060010;
+        public static final int login_username=0x7f060011;
+        public static final int login_username_hint=0x7f060012;
+        public static final int request_row_converted_file=0x7f060013;
+        public static final int request_row_id=0x7f060014;
+        public static final int request_row_status=0x7f060015;
+        public static final int submit_acc_button=0x7f060016;
+        public static final int submit_button=0x7f060017;
+        public static final int submit_reg_button=0x7f060018;
+        public static final int website_url_delete_request=0x7f060019;
+        public static final int website_url_download=0x7f06001a;
+        public static final int website_url_login=0x7f06001b;
+        public static final int website_url_make_request=0x7f06001c;
+        public static final int website_url_update_requests=0x7f06001d;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

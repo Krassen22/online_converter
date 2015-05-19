@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="example">Example</string>
+	<string name="example">Example</string>
 
-    <string name="app_name">Convertor</string>
-    <string name="hello_world">Hello world!</string>
+	<string name="app_name">Convertor</string>
+	<string name="hello_world">Hello world!</string>
 
-    <string name="action_logout">Logout</string>
-    <string name="action_new">New</string>
-    <string name="action_update">Update</string>
+	<string name="action_logout">Logout</string>
+	<string name="action_new">New</string>
+	<string name="action_update">Update</string>
 
-    <!-- login_screen.xml -->
+	<!-- login_screen.xml -->
 	<string name="login_username">Username</string>
 	<string name="login_password">Password</string>
 	<string name="submit_button">Login</string>
 	<string name="submit_reg_button">Register</string>
-	<string name="login_username_hint">Username</string>
-	<string name="login_password_hint">Password</string>
+	<string name="login_username_hint">example@mail.com</string>
+	<string name="login_password_hint">password</string>
+	<string name="login_password_confirm_hint">re-password</string>
 
 	<!-- login screen java file -->
 	<string name="website_url_login">http://91.211.189.161:3000/converter_api/login/</string>
@@ -25,7 +26,8 @@
 	<string name="website_url_delete_request">http://91.211.189.161:3000/converter_api/delete_request/</string>
 
 	<!-- register screen java file -->
-	<string name="Email_text">Email</string>
+	<string name="submit_acc_button">Create Account</string>
+	<string name="confirm_password_text">Confirm Password</string>
 
 	<!-- request_row -->
 	<string name="request_row_id">id: </string>
@@ -42,5 +44,7 @@
 
 	<string name="dialog_ok">OK</string>
 	<string name="dialog_cancel">Cancel</string>
+
+
 
 </resources>
