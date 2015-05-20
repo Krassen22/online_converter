@@ -12,7 +12,9 @@ body {
 }
 
 
-/*   News  */
+/* Home */
+/* Contact */
+/* About */
 
 /* Content */
 
@@ -44,6 +46,11 @@ body {
 	font-size: 26px;
 	color: #ff6600;
 }
+.title span{
+	color: #D80000;
+	font: 29px helvetica, cursive, tahoma, arial, sans-serif;
+	float:left;
+}
 
 .title a {
 	text-decoration: none;
@@ -73,7 +80,7 @@ body {
 	color: #999;
 }
 
-.meta .posted a {
+.meta .posted span {
 	text-decoration: none;
 	color: #ff6600; 
 }
@@ -100,6 +107,13 @@ body {
 .links a {
 	text-decoration: underline;
 	color: #ff6600;
+}
+
+/* formats list */
+.entry ul li {
+	list-style-Type: none;
+	padding: 0 0 4px 23px;
+	background: url(http://www.computerhope.com/arrow.gif) no-repeat left top;
 }
 
 #our-team {
@@ -134,3 +148,24 @@ body {
 .after-our-team {
 	clear: left;
 }
+
+/* Button */ 
+button[type="button"] {
+	background: linear-gradient(to bottom, #ff6600, #222);
+	border-radius: 15px;
+	color: white;
+	margin: 7px auto;
+	padding: 6px;
+	width: 10%;
+}
+
+button[type="button"]:hover {
+	background: linear-gradient(to bottom, #ff6600, #111);
+}
+
+/* Italic font */
+@font-face {
+    font-family: ItalicFont;
+    src: url(/assets/Aramis Italic);
+}
+

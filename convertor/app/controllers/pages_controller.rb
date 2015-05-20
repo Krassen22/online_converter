@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 	def contact
 	end
 
-	def news
+	def home
 	end
 
 end
