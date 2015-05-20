@@ -12,12 +12,15 @@ button[type="clear_button"] {
 	margin: 0px auto;
 	padding: 6px;
 	width: 80px;
-	text-decoration: none;
 	position: static;
 	
 }
 
 button[type="clear_button"]:hover {
-	text-decoration: none;
 	background: linear-gradient(to bottom, #ff6600, #111);
+}
+
+button[type="clear_button"] a{
+	text-decoration: none;
+	color: #fff;
 }

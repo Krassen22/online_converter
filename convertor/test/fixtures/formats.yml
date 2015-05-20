@@ -22,7 +22,7 @@ videos<%= format %>:
 <% end %>
 
 # audio
-<% formats = ["wav", "aiff", "mp3"] %>
+<% formats = ["wav", "aiff", "mp3", "flac"] %>
 <% formats.each do |format| %>
 videos<%= format %>:
  format: <%= format %>
