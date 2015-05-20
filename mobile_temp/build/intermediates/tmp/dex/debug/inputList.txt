@@ -1,2 +1,0 @@
-/home/kalin/workspace/Convertor/build/intermediates/classes/debug
-/home/kalin/workspace/Convertor/build/intermediates/pre-dexed/debug/android-support-v4-6ece33f4a14604616a13031cee3a6124e56286a8.jar
