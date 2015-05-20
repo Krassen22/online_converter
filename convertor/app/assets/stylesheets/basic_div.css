@@ -1,5 +1,23 @@
-.clear_button {
-	max-width: 950px;
+
+.clear_button_class{
 	text-align: right;
-	width: 100%;
+	padding-right: 12%;
+	margin-bottom: 10px;
+}
+
+button[type="clear_button"] {
+	background: linear-gradient(to bottom, #ff6600, #222);
+	border-radius: 15px;
+	color: white;
+	margin: 0px auto;
+	padding: 6px;
+	width: 80px;
+	text-decoration: none;
+	position: static;
+	
+}
+
+button[type="clear_button"]:hover {
+	text-decoration: none;
+	background: linear-gradient(to bottom, #ff6600, #111);
 }
