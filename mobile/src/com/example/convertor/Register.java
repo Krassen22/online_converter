@@ -59,25 +59,12 @@ public class Register extends Activity {
         }
     };
 
-    private void set_token(String token) {
-        SharedPreferences settings = getSharedPreferences("token", MODE_PRIVATE);
-        SharedPreferences.Editor edit = settings.edit();
-        edit.putString("token", token);
-        edit.apply();
-    }
-
-    private void login() {
-        Intent i = new Intent(getApplicationContext(), ShowRequests.class);
-        startActivity(i);
-        finish();
-    }
-
-    private void handle_action(String token) {
-        if(token.equals("Error")) {
-            Toast.makeText(getApplicationContext(), "Passwords are different", Toast.LENGTH_LONG).show();
+    private void handle_action(String message) {
+        if(!message.equals("Success")) {
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
         } else {
-            set_token(token);
-            login();
+            Toast.makeText(getApplicationContext(), "Successfully registered", Toast.LENGTH_LONG).show();
+            finish();
         }
     }
 
