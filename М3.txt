@@ -1,0 +1,10 @@
+// Online converter (Android App) //
+1. Login screen with Email and Password fields.
+
+2. Register screen so the user can create his account within the app.
+
+3. The app will send requests to the server that will contain url of the video and the format in which will be converted.
+
+4. The app will receive a link to the converted file.
+
+5. The user will have the option to logout.
