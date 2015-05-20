@@ -15,12 +15,12 @@ class ConverterApiController < ApplicationController
 	end
 
 	def register
-		user = User.new user_params
+		@user = User.new user_params
 
-		if user.save && params[:confirm_password] == params[:password]
+		if @user.save && params[:confirm_password] == params[:password]
 			render plain: "Success"
 		else	
-			render plain: "Error"
+			set_user_errors
 		end
 	end
 
@@ -89,6 +89,10 @@ class ConverterApiController < ApplicationController
 
 	def user_params
 		params.permit(:email, :password)	
+	end
+
+	def set_user_errors
+		render plain: @user.errors.full_messages.join("\n")
 	end
 
 	def set_error_messages error = nil
